@@ -1,11 +1,11 @@
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background-color: #0B0C10;
-  color: #FFFFFF;
+  background-color: #f8f8f8;
+  color: #434242;
 }
 header {
-  background: #1F2833;
+  background: #6d6d6d;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
@@ -14,28 +14,33 @@ header {
 header h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 24px;
-  color: #00FFFF;
+  color: #00b3ff;
 }
 nav a {
   margin: 0 15px;
-  color: #CCCCCC;
+  color: #f8f8f8;
   text-decoration: none;
+}
+nav a:hover {
+  color: #00b3ff;
 }
 .hero {
   text-align: center;
   padding: 80px 20px;
+  background: #434242;
+  color: #f8f8f8;
 }
 .hero h2 {
   font-size: 36px;
-  color: #00FFFF;
+  color: #00b3ff;
 }
 .hero p {
   font-size: 18px;
-  color: #CCCCCC;
+  color: #8b8b8b;
 }
 .btn {
-  background: #00FFFF;
-  color: #0B0C10;
+  background: #00b3ff;
+  color: #f8f8f8;
   border: none;
   padding: 12px 24px;
   font-size: 16px;
@@ -43,8 +48,15 @@ nav a {
   cursor: pointer;
   border-radius: 4px;
 }
+.btn:hover {
+  background: #009ddb;
+}
 .section {
   padding: 60px 40px;
+  background-color: #f8f8f8;
+}
+.section h2 {
+  color: #434242;
 }
 .grid {
   display: grid;
@@ -52,15 +64,15 @@ nav a {
   gap: 20px;
 }
 .card {
-  background: #1F2833;
+  background: #6d6d6d;
+  color: #f8f8f8;
   padding: 20px;
-  border-left: 3px solid #00FFFF;
+  border-left: 4px solid #00b3ff;
   border-radius: 8px;
 }
 footer {
   text-align: center;
   padding: 20px;
-  background: #1F2833;
-  color: #CCCCCC;
+  background: #434242;
+  color: #f8f8f8;
 }
-
