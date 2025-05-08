@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StaticFlow LLP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #00b3ff;
+      --dark: #434242;
+      --light: #f8f8f8;
+      --gray-light: #8b8b8b;
+      --gray-mid: #6d6d6d;
+    }
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
+    }
+    .hidden-menu {
+      display: none;
+    }
+    .open .hidden-menu {
+      display: flex;
+    }
+    .glass {
+      backdrop-filter: blur(12px);
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .bg-primary {
+      background-color: var(--primary);
+    }
+    .text-primary {
+      color: var(--primary);
+    }
+    .text-gray-light {
+      color: var(--gray-light);
+    }
+    .bg-dark {
+      background-color: var(--dark);
+    }
+    .bg-mid {
+      background-color: var(--gray-mid);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Responsive Header with Toggle -->
+  <header class="fixed top-0 w-full z-50 px-4 py-3 glass">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="#" class="flex items-center gap-2">
+        <svg viewBox="0 0 78 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6">
+          <path d="M3 0H5V18H3V0ZM13 0H15V18H13V0ZM18 3V5H0V3H18ZM0 15V13H18V15H0Z" fill="url(#logo-gradient)"/>
+          <defs>
+            <linearGradient id="logo-gradient" x1="10" y1="0" x2="10" y2="20" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00b3ff" />
+              <stop offset="1" stop-color="#6d6d6d" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="text-lg font-semibold">StaticFlow LLP</span>
+      </a>
+      <nav class="hidden md:flex gap-8 text-sm">
+        <a href="#" class="hover:text-primary">Features</a>
+        <a href="#" class="hover:text-primary">Solution</a>
+        <a href="#" class="hover:text-primary">Pricing</a>
+        <a href="#" class="hover:text-primary">About</a>
+      </nav>
+      <div class="hidden md:flex gap-4">
+        <a href="#" class="border px-4 py-1 rounded text-sm" style="border-color: var(--light); color: var(--light);">Login</a>
+        <a href="#" class="bg-primary px-4 py-1 rounded text-sm text-black font-semibold">Sign Up</a>
+      </div>
+      <button id="menuToggle" class="md:hidden px-3 py-2 border rounded">
+        ☰
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden-menu flex-col px-6 pb-4 md:hidden">
+      <a href="#" class="py-1">Features</a>
+      <a href="#" class="py-1">Solution</a>
+      <a href="#" class="py-1">Pricing</a>
+      <a href="#" class="py-1">About</a>
+      <a href="#" class="py-1">Login</a>
+      <a href="#" class="py-1">Sign Up</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center bg-dark text-white pt-32">
+    <div class="text-center px-6">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Reimagining Financial Expertise</h1>
+      <p class="text-lg md:text-2xl mb-8 text-gray-light">Modern solutions for Startups, VCs, AIFs & Family Offices</p>
+      <a href="#contact" class="px-8 py-3 rounded-full text-lg font-semibold bg-primary text-black">Let’s Talk</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-24 px-6 bg-mid text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6">About StaticFlow LLP</h2>
+      <p class="text-gray-light text-lg leading-relaxed">We are a team of seasoned professionals offering end-to-end financial services including Fund Accounting, M&A, AIF Setup, and Private Trust Management. Founded by industry veterans from WestBridge and Sequoia, our boutique firm delivers personalized, scalable, and technology-enabled financial services.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-24 bg-dark px-6 text-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-16">Our Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-mid rounded-lg shadow border border-gray-light">
+          <h3 class="text-xl font-semibold mb-2">FAC Services</h3>
+          <p class="text-gray-light">Finance, Accounting & Compliance for Startups and Family Offices</p>
+        </div>
+        <div class="p-6 bg-mid rounded-lg shadow border border-gray-light">
+          <h3 class="text-xl font-semibold mb-2">Fund Accounting</h3>
+          <p class="text-gray-light">NAV, SEBI Compliance, Investor Reporting, Risk Controls</p>
+        </div>
+        <div class="p-6 bg-mid rounded-lg shadow border border-gray-light">
+          <h3 class="text-xl font-semibold mb-2">Fundraising</h3>
+          <p class="text-gray-light">Equity, Debt, Special Situations, and Angel Networks</p>
+        </div>
+        <div class="p-6 bg-mid rounded-lg shadow border border-gray-light">
+          <h3 class="text-xl font-semibold mb-2">M&A Advisory</h3>
+          <p class="text-gray-light">Deal Sourcing, Structuring, Valuation, and Due Diligence</p>
+        </div>
+        <div class="p-6 bg-mid rounded-lg shadow border border-gray-light">
+          <h3 class="text-xl font-semibold mb-2">AIF Setup</h3>
+          <p class="text-gray-light">SEBI/GIFT City Funds, Offshore Mauritius Funds, Legal Docs</p>
+        </div>
+        <div class="p-6 bg-mid rounded-lg shadow border border-gray-light">
+          <h3 class="text-xl font-semibold mb-2">Private Trusts</h3>
+          <p class="text-gray-light">Structuring, Compliance & Operations for HNI Trusts</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 px-6 bg-mid text-white">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8">Contact Us</h2>
+      <p class="mb-4 text-gray-light">StaticFlow LLP, 23, 6th Main Road, Mathikere Extension, Bangalore – 560054</p>
+      <p class="mb-2 text-gray-light">Phone: +91 9741393924 / +91 9110845916</p>
+      <p class="mb-6 text-gray-light">Email: <a href="mailto:staticflowllp@gmail.com" class="underline">staticflowllp@gmail.com</a>, <a href="mailto:invest@staticflow.in" class="underline">invest@staticflow.in</a></p>
+      <a href="mailto:kr@staticflow.in" class="inline-block mt-4 bg-primary px-6 py-3 rounded-full font-semibold text-black">Email Founder</a>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  </script>
+</body>
+
+</html>
