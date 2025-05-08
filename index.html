@@ -2,11 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width= 1120px, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StaticFlow LLP</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f8f8f8;
+      color: #434242;
+    }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
     .card:hover {
       transform: scale(1.02);
       transition: transform 0.3s ease;
@@ -21,109 +32,138 @@
     .card {
       transition: all 0.3s ease;
     }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    header img {
+      height: 40px;
+      vertical-align: middle;
+    }
+    header nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    header nav a:hover {
+      color: #00b3ff;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <img src="assets/SF_logo.png" alt="StaticFlow Logo" style="height: 60px; vertical-align: middle;">
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#team">Team</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="container">
+    <header>
+      <img src="assets/logo.png" alt="StaticFlow Logo">
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <section class="hero">
-    <h2>Boutique Financial Consultancy & Services Firm</h2>
-    <p>Empowering VCs, AIFs, Startups & Family Offices with Precision Finance</p>
-    <button class="btn" onclick="scrollToSection('services')">Learn More</button>
-  </section>
+    <section class="hero">
+      <h2>Boutique Financial Consultancy & Services Firm</h2>
+      <p>Empowering VCs, AIFs, Startups & Family Offices with Precision Finance</p>
+      <button class="btn" onclick="scrollToSection('services')">Learn More</button>
+    </section>
 
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <div class="grid">
-      <div class="card">Finance, Accounting & Compliance Services</div>
-      <div class="card">Fund Accounting & Regulatory Compliance</div>
-      <div class="card">Fundraising Consultancy</div>
-      <div class="card">Mergers & Acquisitions</div>
-      <div class="card">SEBI/GIFT City & Offshore Fund Setup</div>
-      <div class="card">Private Trust Structuring & Management</div>
-    </div>
-  </section>
+    <section id="services" class="section">
+      <h2>Our Services</h2>
+      <div class="grid">
+        <div class="card">Finance, Accounting & Compliance Services</div>
+        <div class="card">Fund Accounting & Regulatory Compliance</div>
+        <div class="card">Fundraising Consultancy</div>
+        <div class="card">Mergers & Acquisitions</div>
+        <div class="card">SEBI/GIFT City & Offshore Fund Setup</div>
+        <div class="card">Private Trust Structuring & Management</div>
+      </div>
+    </section>
 
-  <section id="about" class="section">
-    <h2>About the Founder</h2>
-    <div class="grid">
-      <img src="founder.jpg" alt="Founder Photo" style="max-width: 100%; border-radius: 8px; max-width: 300px;">
-      <p>Ramanathan (Ram) is a seasoned finance professional with 30+ years of experience in venture capital, private equity, and fund management. Ex-Sequoia, Ex-WestBridge Capital, and founder of StaticFlow LLP, he has been instrumental in setting up SEBI registered AIFs, managing fund accounting, compliance, and strategic guidance for numerous startups and family offices.</p>
-    </div>
-  </section>
+    <section id="about" class="section">
+      <h2>About the Founder</h2>
+      <div class="grid">
+        <img src="assets/founder.jpg" alt="Founder Photo" style="max-width: 100%; border-radius: 8px; max-width: 300px;">
+        <p>Ramanathan (Ram) is a seasoned finance professional with 30+ years of experience in venture capital, private equity, and fund management. Ex-Sequoia, Ex-WestBridge Capital, and founder of StaticFlow LLP, he has been instrumental in setting up SEBI registered AIFs, managing fund accounting, compliance, and strategic guidance for numerous startups and family offices.</p>
+      </div>
+    </section>
 
-  <section id="team" class="section">
-    <h2>Our Team</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="team-karthik.jpg" alt="R Karthik" style="width:100%; border-radius: 6px;">
-        <h3>R Karthik</h3>
-        <p>An artist and designer, Karthik leads the IT initiatives and design for pitch decks. He holds an advanced diploma in animation.</p>
+    <section id="team" class="section">
+      <h2>Our Team</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="assets/team-karthik.jpg" alt="R Karthik">
+          <h3>R Karthik</h3>
+          <p>An artist and designer, Karthik leads the IT initiatives and design for pitch decks. He holds an advanced diploma in animation.</p>
+        </div>
+        <div class="card">
+          <img src="assets/team-gopal.jpg" alt="R Gopalakrishnan">
+          <h3>R Gopalakrishnan</h3>
+          <p>A commerce graduate and CA Finalist, Gopal manages finance and compliance operations for the firm.</p>
+        </div>
+        <div class="card">
+          <img src="assets/team-pramod.jpg" alt="Pramod B R">
+          <h3>Pramod B R</h3>
+          <p>Leads VC/PE, FP&A, MIS and strategy consulting with prior experience at Zolostays and Geodis US.</p>
+        </div>
+        <div class="card">
+          <img src="assets/team-kprabhu.jpg" alt="Karthik Prabhu">
+          <h3>Karthik Prabhu</h3>
+          <p>CA and CFA Level 1 with 3+ years in tax and finance. Manages M&A and shared CFO functions.</p>
+        </div>
+        <div class="card">
+          <img src="assets/team-sunder.jpg" alt="Sunder Ramdas">
+          <h3>Sunder Ramdas</h3>
+          <p>ACMA, MBA Finance. 23+ years in VC/PE fund accounting, Ex-WestBridge & Sequoia Capital.</p>
+        </div>
+        <div class="card">
+          <img src="assets/team-prajwal.jpg" alt="K Prajwal">
+          <h3>K Prajwal</h3>
+          <p>Commerce graduate and CA Finalist overseeing client finance and compliance.</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="team-gopal.jpg" alt="R Gopalakrishnan" style="width:100%; border-radius: 6px;">
-        <h3>R Gopalakrishnan</h3>
-        <p>A commerce graduate and CA Finalist, Gopal manages finance and compliance operations for the firm.</p>
-      </div>
-      <div class="card">
-        <img src="team-pramod.jpg" alt="Pramod B R" style="width:100%; border-radius: 6px;">
-        <h3>Pramod B R</h3>
-        <p>Leads VC/PE, FP&A, MIS and strategy consulting with prior experience at Zolostays and Geodis US.</p>
-      </div>
-      <div class="card">
-        <img src="team-kprabhu.jpg" alt="Karthik Prabhu" style="width:100%; border-radius: 6px;">
-        <h3>Karthik Prabhu</h3>
-        <p>CA and CFA Level 1 with 3+ years in tax and finance. Manages M&A and shared CFO functions.</p>
-      </div>
-      <div class="card">
-        <img src="team-sunder.jpg" alt="Sunder Ramdas" style="width:100%; border-radius: 6px;">
-        <h3>Sunder Ramdas</h3>
-        <p>ACMA, MBA Finance. 23+ years in VC/PE fund accounting, Ex-WestBridge & Sequoia Capital.</p>
-      </div>
-      <div class="card">
-        <img src="team-prajwal.jpg" alt="K Prajwal" style="width:100%; border-radius: 6px;">
-        <h3>K Prajwal</h3>
-        <p>Commerce graduate and CA Finalist overseeing client finance and compliance.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="testimonials" class="section">
-    <h2>Testimonials</h2>
-    <div class="grid">
-      <div class="card">
-        <p>“StaticFlow helped us structure and close our funding round smoothly. Their financial insights were invaluable.”</p>
-        <strong>– Founder, Tech Startup</strong>
+    <section id="testimonials" class="section">
+      <h2>Testimonials</h2>
+      <div class="grid">
+        <div class="card">
+          <p>“StaticFlow helped us structure and close our funding round smoothly. Their financial insights were invaluable.”</p>
+          <strong>– Founder, Tech Startup</strong>
+        </div>
+        <div class="card">
+          <p>“Their Virtual CFO services gave us the strategic edge we needed as we scaled operations.”</p>
+          <strong>– CFO, E-commerce Firm</strong>
+        </div>
+        <div class="card">
+          <p>“Brilliant team, timely execution, and deep domain knowledge. Highly recommend StaticFlow!”</p>
+          <strong>– Investor, VC Fund</strong>
+        </div>
       </div>
-      <div class="card">
-        <p>“Their Virtual CFO services gave us the strategic edge we needed as we scaled operations.”</p>
-        <strong>– CFO, E-commerce Firm</strong>
-      </div>
-      <div class="card">
-        <p>“Brilliant team, timely execution, and deep domain knowledge. Highly recommend StaticFlow!”</p>
-        <strong>– Investor, VC Fund</strong>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: staticflowllp@gmail.com | Phone: +91 9741393924</p>
-    <p>Address: 23, 6th Main Road, Mathikere Extension, Bangalore – 560054</p>
-  </section>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: staticflowllp@gmail.com | Phone: +91 9741393924</p>
+      <p>Address: 23, 6th Main Road, Mathikere Extension, Bangalore – 560054</p>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 StaticFlow LLP | All Rights Reserved</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 StaticFlow LLP | All Rights Reserved</p>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
